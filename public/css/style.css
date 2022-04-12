@@ -247,13 +247,9 @@ nav ul li a:hover {
 }
 
 .site-wrap {
-    max-width: 700px;
-    margin: 70px auto;
     background: var(--text);
     padding: 40px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-    transform: scale(0.98);
-    transition: transform 0.5s;
     border-radius: 12px;
 }
 
@@ -325,7 +321,7 @@ legend {
 
 .btn-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
 .btn {
@@ -345,6 +341,22 @@ legend {
     background-color: var(--dark-bkg);
     border-radius: 12px;
     padding: 1em;
+}
+
+/* CARD */
+.card-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.card-container li {
+    list-style-type: none;
+    border: 1px solid black;
+    height: 80px;
+    width: 65px;    
+    padding: 1em 1em;
 }
 
 /* FOOTER */
