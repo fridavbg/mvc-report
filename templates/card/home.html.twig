@@ -5,19 +5,10 @@
 {% block content %}
   <div class="site-wrap">
     <h1>{{ title }}</h1>
-    <form method="post">
-      <fieldset>
-        <legend>A deck of cards</legend>
         <p class="btn-container">
           <a href="{{path("card-deck")}}" class="btn">Deck</a>
           <a href="{{path("card-shuffle")}}" class="btn">Shuffle</a>
-          <input type="submit" name="add" value="Add" class="btn">
-          <input type="submit" name="clear" value="Clear" class="btn">
+          <a href="{{path("card-draw")}}" class="btn">Draw</a>
         </p>
-
-        {# {{ include('block/flash-message.html.twig') }} #}
-
-      </fieldset>
-    </form>
   </div>
 {% endblock %}

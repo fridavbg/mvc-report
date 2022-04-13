@@ -8,7 +8,7 @@ class Deck
      * @var array representing full deck of cards
      */
     protected $cards;
-
+    private $leftOverCards;
     /**
      * Create a deck of 52 cards
      */
@@ -19,6 +19,7 @@ class Deck
         $values = array(
             'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'
         );
+        $this->leftOverCards = [];
 
         /** 
          * Loop through to create Deck of cards
@@ -47,6 +48,39 @@ class Deck
     public function setDeck($cards)
     {
         $this->cards = $cards;
+    }
+
+    /**
+     * leftOverDeck Var Setter
+     * @param array $leftOverCards
+     */
+    public function setLeftOverDeck($leftOverCards)
+    {
+        $this->leftOverCards = $leftOverCards;
+    }
+
+    /**
+     * leftOverDeck Var Getter
+     * @return array $leftOverCards
+     */
+    public function getLeftOverDeck()
+    {
+        return $this->leftOverCards;
+    }
+
+
+
+    /**
+     * This function remove array of cards that the player took
+     * @param $leftOverDeck array
+     * @param $cardToBeRemoved int
+     * @return array
+     */
+    public function updateLeftOverDeck($leftOverCards,$cardToBeRemoved){
+
+        $updatedDeck = array_diff($leftOverCards,$cardToBeRemoved);
+        $this->leftOverCards = $updatedDeck;
+        return $this->leftOverCards;
     }
 
     /**

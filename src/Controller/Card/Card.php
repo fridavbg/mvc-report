@@ -7,9 +7,6 @@ class Card
     protected $suit;
     protected $value;
 
-    /**
-     * Create a deck of 52 cards
-     */
     public function __construct($suit, $value)
     {
         $this->cards = array();

@@ -9,9 +9,9 @@ Börja med att utveckla dina klasser och testa dem i webbsidor enligt följande.
 
 - [x] Gör en förstasida card som länkar till samtliga undersidor för denna uppgiften. Detta är din “landningssida” för denna uppgiften. Placera länken till sidan i din navbar så den är lätt att nå.
 
-- [] Skapa klasser för att hantera kort (card) och kortlek (deck). Skapa en sida card/deck som visar samtliga kort i kortleken sorterade per färg och värde. Ess kan vara antingen 1 eller 14 beroende av vilket kortspel man spelar.
+- [x] Skapa klasser för att hantera kort (card) och kortlek (deck). Skapa en sida card/deck som visar samtliga kort i kortleken sorterade per färg och värde. Ess kan vara antingen 1 eller 14 beroende av vilket kortspel man spelar.
 
-- [] Skapa en sida card/deck/shuffle som visar samtliga kort i kortleken när den har blandats.
+- [x] Skapa en sida card/deck/shuffle som visar samtliga kort i kortleken när den har blandats.
 
 - [] Skapa en sida card/deck/draw som drar ett kort från kortleken och visar upp det. Visa även antalet kort som är kvar i kortleken.
 
