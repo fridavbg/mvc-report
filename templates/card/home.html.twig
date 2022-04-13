@@ -5,22 +5,19 @@
 {% block content %}
   <div class="site-wrap">
     <h1>{{ title }}</h1>
-    <div class="card-container">
-      {# {{dump(deck[0].getValue())}}
-      {{dump(deck[0].getSuite())}} #}
-      {% for key, card in deck %}
-        <ul class="card">
-          {% if card.suit == 'H'%}
-            <li class="red-suit">♥</li>
-          {% elseif card.suit == 'S'%}
-            <li class="black-suit">♠</li>
-          {% elseif card.suit == 'C'%}
-            <li class="black-suit">♣</li>
-          {% else %}
-            <li class="red-suit">♦</li>
-          {% endif %}
-          <li>{{ card.value }}</li>
-        </ul>
-      {% endfor %}
-    </div>
-  {% endblock %}
+    <form method="post">
+      <fieldset>
+        <legend>A deck of cards</legend>
+        <p class="btn-container">
+          <a href="{{path("card-deck")}}" class="btn">Deck</a>
+          <a href="{{path("card-shuffle")}}" class="btn">Shuffle</a>
+          <input type="submit" name="add" value="Add" class="btn">
+          <input type="submit" name="clear" value="Clear" class="btn">
+        </p>
+
+        {# {{ include('block/flash-message.html.twig') }} #}
+
+      </fieldset>
+    </form>
+  </div>
+{% endblock %}

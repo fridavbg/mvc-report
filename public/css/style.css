@@ -321,7 +321,7 @@ legend {
 
 .btn-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .btn {
@@ -330,6 +330,7 @@ legend {
     text-decoration: none;
     cursor: pointer;
     padding: 1em;
+    margin: 3px;
     border-radius: 5px;
     color: var(--light-text);
     box-shadow: var(--accent) 0px 10px 15px -5px;
@@ -343,12 +344,14 @@ legend {
     padding: 1em;
 }
 
+
 /* CARD */
 .card-container {
     display: grid;
     grid-template-columns: 100px 100px 100px 100px;
     grid-gap: 12px;
     justify-content: center;
+    padding-bottom: 12px;
 }
 
 .card {

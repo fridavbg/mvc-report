@@ -7,7 +7,7 @@ class Deck
     /**
      * @var array representing full deck of cards
      */
-    public $cards;
+    protected $cards;
 
     /**
      * Create a deck of 52 cards
@@ -38,5 +38,29 @@ class Deck
     public function getDeck()
     {
         return $this->cards;
+    }
+
+    /**
+     * Deck Var Setter
+     * @param mixed $deck
+     */
+    public function setDeck($cards)
+    {
+        $this->cards = $cards;
+    }
+
+    /**
+     * Shuffle deck of cards
+     * @return bool|array
+     */
+    public function shuffleDeck()
+    {
+        $deckCards = $this->getDeck();
+        if (shuffle($deckCards)) {
+            $this->setDeck($deckCards);
+            return $deckCards;
+        } else {
+            return false;
+        }
     }
 }

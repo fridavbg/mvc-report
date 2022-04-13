@@ -4,8 +4,8 @@ namespace App\Card;
 
 class Card
 {
-    public $suit;
-    public $value;
+    protected $suit;
+    protected $value;
 
     /**
      * Create a deck of 52 cards
@@ -38,21 +38,21 @@ class Card
         $this->value = $value;
     }
 
-    // /** NEEDED IF attribute are public
-    //  * Shows card value
-    //  * @return string
-    //  */
-    // public function getValue() 
-    // {
-    //     return $this->value;
-    // }
+    /**
+     * Shows card value
+     * @return string
+     */
+    public function getValue() 
+    {
+        return $this->value;
+    }
 
-    // /**
-    //  * Show card suit
-    //  * @return string
-    //  */
-    // public function getSuite() 
-    // {
-    //     return $this->suit;
-    // }
+    /**
+     * Show card suit
+     * @return string
+     */
+    public function getSuite() 
+    {
+        return $this->suit;
+    }
 }
