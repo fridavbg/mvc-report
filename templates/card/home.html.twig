@@ -9,13 +9,18 @@
       {# {{dump(deck[0].getValue())}}
       {{dump(deck[0].getSuite())}} #}
       {% for key, card in deck %}
-        <ul>
-        <li>
-            {{ card.getSuite() }}
-        </br>
-          {{ card.getValue() }}
-        </li>
-      </ul>
-    {% endfor %}
-  </div>
-{% endblock %}
+        <ul class="card">
+          {% if card.suit == 'H'%}
+            <li class="red-suit">♥</li>
+          {% elseif card.suit == 'S'%}
+            <li class="black-suit">♠</li>
+          {% elseif card.suit == 'C'%}
+            <li class="black-suit">♣</li>
+          {% else %}
+            <li class="red-suit">♦</li>
+          {% endif %}
+          <li>{{ card.value }}</li>
+        </ul>
+      {% endfor %}
+    </div>
+  {% endblock %}

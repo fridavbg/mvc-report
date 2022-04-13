@@ -7,7 +7,7 @@ class Deck
     /**
      * @var array representing full deck of cards
      */
-    protected $cards;
+    public $cards;
 
     /**
      * Create a deck of 52 cards
@@ -17,7 +17,7 @@ class Deck
         $this->cards = array();
         $suits = array('H', 'C', 'D', 'S');
         $values = array(
-            'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', '*'
+            'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'
         );
 
         /** 
