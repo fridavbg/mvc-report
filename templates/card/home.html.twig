@@ -6,9 +6,16 @@
   <div class="site-wrap">
     <h1>{{ title }}</h1>
     <div class="card-container">
-    {% for card in deck %}
-      <li>{{ card }}</li>
+      {# {{dump(deck[0].getValue())}}
+      {{dump(deck[0].getSuite())}} #}
+      {% for key, card in deck %}
+        <ul>
+        <li>
+            {{ card.getSuite() }}
+        </br>
+          {{ card.getValue() }}
+        </li>
+      </ul>
     {% endfor %}
-    </div>
   </div>
 {% endblock %}

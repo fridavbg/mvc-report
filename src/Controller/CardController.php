@@ -18,7 +18,7 @@ class CardController extends AbstractController
         $deck = new \App\Card\Deck();
         $data = [
             'title' => 'Deck',
-            'deck' => $deck->buildDeck()
+            'deck' => $deck->getDeck()
         ];
         return $this->render('card/home.html.twig', $data);
     }
